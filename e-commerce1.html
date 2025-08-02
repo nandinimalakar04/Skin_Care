@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skincare Website</title>
+    <link rel="stylesheet" href="skincare.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/all.min.css">
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <!-- Logo -->
+            <a href="index.html"><img src="images/logo.jpg" alt="Logo"></a>
+
+            <!-- Navigation Links -->
+            <div class="nav-links" id="nav-links">
+                <!-- Close Icon (Mobile Only) -->
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="#">Glamour</a></li>
+                    <li><a href="#">Account</a></li>
+                    <li><a href="#">Brands</a></li>
+                    <li><a href="#">Products Category</a></li>
+                </ul>
+            </div>
+
+            <!-- Hamburger Menu Icon (Mobile Only) -->
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+        <!-- Hero Section -->
+        <div class="text-box">
+            <h1>Glowing skin is always in</h1>
+            <p>Being comfortable in your skin means to embrace what you are born with, but how about enhancing it with skincare to make it feel loved?</p>
+            <a href="#" class="heroine">Heal your skin here</a>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const navLinks = document.getElementById("nav-links");
+
+            window.showMenu = function () {
+                navLinks.style.right = "0";
+            }
+
+            window.hideMenu = function () {
+                navLinks.style.right = "-200px";
+            }
+        });
+    </script>
+</body>
+</html>
